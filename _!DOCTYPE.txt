@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WebAR GLTF Model</title>
+<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0px; overflow: hidden;">
+<a-scene embedded arjs>
+<!-- Asset Management System -->
+<a-assets>
+<a-asset-item id="myModel" src="untitlednewmod.glb"></a-asset-item>
+</a-assets>
+<!-- Hiro Marker -->
+<a-marker preset="hiro">
+<a-gltf-model src="#myModel" 
+position="0 0 0" 
+scale="0.5 0.5 0.5" 
+animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
+</a-gltf-model>
+</a-marker>
+<a-entity camera></a-entity>
+</a-scene>
+</body>
+</html>
